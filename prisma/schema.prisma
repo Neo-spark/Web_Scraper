@@ -1,0 +1,199 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model blocks {
+  id          Int       @id @default(autoincrement())
+  district_id Int
+  name        String    @db.VarChar(100)
+  created_at  DateTime? @db.Timestamp(6)
+  districts   districts @relation(fields: [district_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([district_id, name])
+}
+
+model categories {
+  id               Int             @id @default(autoincrement())
+  slug             String          @unique @db.VarChar(50)
+  name             String          @db.VarChar(100)
+  name_hi          String?         @db.VarChar(100)
+  icon             String?         @db.VarChar(10)
+  description      String?
+  parent_id        Int?
+  created_at       DateTime?       @db.Timestamp(6)
+  categories       categories?     @relation("categoriesTocategories", fields: [parent_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  other_categories categories[]    @relation("categoriesTocategories")
+  contacts         contacts[]
+  organizations    organizations[]
+}
+
+model contact_feedback {
+  id          Int       @id @default(autoincrement())
+  contact_id  Int?
+  is_working  Boolean?
+  comment     String?
+  reported_by String?   @db.VarChar(100)
+  created_at  DateTime? @db.Timestamp(6)
+  contacts    contacts? @relation(fields: [contact_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model contacts {
+  id               Int                @id @default(autoincrement())
+  contact_type     String             @db.VarChar(20)
+  value            String             @db.VarChar(300)
+  label            String?            @db.VarChar(200)
+  org_id           Int?
+  officer_id       Int?
+  level            String?            @db.VarChar(20)
+  state_id         Int?
+  district_id      Int?
+  category_id      Int?
+  is_active        Boolean?
+  is_verified      Boolean?
+  confidence       Float?
+  source_url       String?            @db.VarChar(500)
+  source_type      String?            @db.VarChar(20)
+  page_title       String?            @db.VarChar(300)
+  domain           String?            @db.VarChar(200)
+  content_hash     String?            @db.VarChar(64)
+  scraped_at       DateTime?          @db.Timestamp(6)
+  last_verified    DateTime?          @db.Timestamp(6)
+  created_at       DateTime?          @db.Timestamp(6)
+  updated_at       DateTime?          @db.Timestamp(6)
+  contact_feedback contact_feedback[]
+  categories       categories?        @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  districts        districts?         @relation(fields: [district_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  officers         officers?          @relation(fields: [officer_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  organizations    organizations?     @relation(fields: [org_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  states           states?            @relation(fields: [state_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([contact_type, value, org_id])
+}
+
+model crawl_jobs {
+  id             Int          @id @default(autoincrement())
+  job_name       String?      @db.VarChar(100)
+  started_at     DateTime?    @db.Timestamp(6)
+  finished_at    DateTime?    @db.Timestamp(6)
+  status         String?      @db.VarChar(20)
+  urls_total     Int?
+  urls_done      Int?
+  contacts_found Int?
+  error_log      String?
+  crawl_urls     crawl_urls[]
+}
+
+model crawl_urls {
+  id             Int         @id @default(autoincrement())
+  job_id         Int?
+  url            String      @unique @db.VarChar(1000)
+  domain         String?     @db.VarChar(200)
+  depth          Int?
+  priority       Int?
+  status         String?     @db.VarChar(20)
+  status_code    Int?
+  content_hash   String?     @db.VarChar(64)
+  contacts_found Int?
+  error          String?
+  crawled_at     DateTime?   @db.Timestamp(6)
+  added_at       DateTime?   @db.Timestamp(6)
+  crawl_jobs     crawl_jobs? @relation(fields: [job_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model districts {
+  id            Int             @id @default(autoincrement())
+  state_id      Int
+  name          String          @db.VarChar(100)
+  hq_city       String?         @db.VarChar(100)
+  created_at    DateTime?       @db.Timestamp(6)
+  blocks        blocks[]
+  contacts      contacts[]
+  states        states          @relation(fields: [state_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  officers      officers[]
+  organizations organizations[]
+  search_logs   search_logs[]
+
+  @@unique([state_id, name])
+}
+
+model officers {
+  id            Int            @id @default(autoincrement())
+  name          String         @db.VarChar(200)
+  name_hi       String?        @db.VarChar(200)
+  designation   String         @db.VarChar(300)
+  cadre         String?        @db.VarChar(50)
+  org_id        Int?
+  state_id      Int?
+  district_id   Int?
+  is_current    Boolean?
+  source_url    String?        @db.VarChar(500)
+  scraped_at    DateTime?      @db.Timestamp(6)
+  created_at    DateTime?      @db.Timestamp(6)
+  updated_at    DateTime?      @db.Timestamp(6)
+  contacts      contacts[]
+  districts     districts?     @relation(fields: [district_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  organizations organizations? @relation(fields: [org_id], references: [id], onUpdate: NoAction)
+  states        states?        @relation(fields: [state_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model organizations {
+  id                  Int             @id @default(autoincrement())
+  name                String          @db.VarChar(300)
+  name_normalized     String?         @db.VarChar(300)
+  name_hi             String?         @db.VarChar(300)
+  short_name          String?         @db.VarChar(50)
+  org_type            String?         @db.VarChar(50)
+  level               String          @db.VarChar(20)
+  state_id            Int?
+  district_id         Int?
+  parent_org_id       Int?
+  category_id         Int?
+  website             String?         @db.VarChar(500)
+  address             String?
+  pin_code            String?         @db.VarChar(10)
+  is_active           Boolean?
+  source_url          String?         @db.VarChar(500)
+  created_at          DateTime?       @db.Timestamp(6)
+  updated_at          DateTime?       @db.Timestamp(6)
+  contacts            contacts[]
+  officers            officers[]
+  categories          categories?     @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  districts           districts?      @relation(fields: [district_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  organizations       organizations?  @relation("organizationsToorganizations", fields: [parent_org_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  other_organizations organizations[] @relation("organizationsToorganizations")
+  states              states?         @relation(fields: [state_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model search_logs {
+  id            Int        @id @default(autoincrement())
+  query         String?    @db.VarChar(500)
+  category_slug String?    @db.VarChar(50)
+  state_id      Int?
+  district_id   Int?
+  results_count Int?
+  latency_ms    Float?
+  user_ip       String?    @db.VarChar(50)
+  created_at    DateTime?  @db.Timestamp(6)
+  districts     districts? @relation(fields: [district_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  states        states?    @relation(fields: [state_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model states {
+  id            Int             @id @default(autoincrement())
+  name          String          @unique @db.VarChar(100)
+  code          String          @unique @db.VarChar(5)
+  capital       String?         @db.VarChar(100)
+  region        String?         @db.VarChar(50)
+  is_ut         Boolean?
+  created_at    DateTime?       @db.Timestamp(6)
+  contacts      contacts[]
+  districts     districts[]
+  officers      officers[]
+  organizations organizations[]
+  search_logs   search_logs[]
+}

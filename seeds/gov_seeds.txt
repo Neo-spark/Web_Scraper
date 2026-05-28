@@ -1,0 +1,292 @@
+# ============================================================
+# Sampark Setu - Government Seed URLs
+# Organized by level and category
+# ============================================================
+
+# ── CENTRAL MINISTRIES ───────────────────────────────────────
+https://www.mohfw.gov.in
+https://www.education.gov.in
+https://www.mha.gov.in
+https://www.finmin.nic.in
+https://www.moef.nic.in
+https://www.agriculture.gov.in
+https://www.jaljeevanmission.gov.in
+https://mohua.gov.in
+https://www.dif.mp.gov.in
+https://labour.gov.in
+https://wcd.nic.in
+https://msme.gov.in
+https://www.pmindia.gov.in
+https://www.india.gov.in
+
+# ── CENTRAL DEPARTMENTS & BODIES ────────────────────────────
+https://ugc.ac.in
+https://www.ncert.nic.in
+https://cbse.gov.in
+https://www.aiims.edu
+https://www.icmr.nic.in
+https://nhm.gov.in
+https://www.cbi.gov.in
+https://ncrb.gov.in
+https://www.nabard.org
+https://rbi.org.in
+https://www.sebi.gov.in
+https://cpcb.nic.in
+https://nhai.gov.in
+https://www.irdai.gov.in
+https://www.upsc.gov.in
+https://ssc.nic.in
+https://www.epfindia.gov.in
+https://esic.gov.in
+https://www.niti.gov.in
+https://cci.gov.in
+
+# ── GRIEVANCE PORTALS ────────────────────────────────────────
+https://pgportal.gov.in
+https://rtionline.gov.in
+https://connect.mygov.in
+
+# ── STATE GOVERNMENTS ────────────────────────────────────────
+# Uttar Pradesh
+https://up.gov.in
+https://uphealth.up.nic.in
+https://upedu.gov.in
+https://uppolice.gov.in
+https://jalkal.up.nic.in
+https://uppcl.org
+https://uprevenue.gov.in
+
+# Maharashtra
+https://www.maharashtra.gov.in
+https://arogya.maharashtra.gov.in
+https://school.maharashtra.gov.in
+https://mahapolice.gov.in
+https://mahaurja.com
+https://mahavitaran.com
+
+# Karnataka
+https://www.karnataka.gov.in
+https://karunadu.karnataka.gov.in
+https://kea.kar.nic.in
+https://ksp.karnataka.gov.in
+https://bescom.karnataka.gov.in
+https://bwssb.gov.in
+
+# Tamil Nadu
+https://www.tn.gov.in
+https://health.tn.gov.in
+https://www.tnpolice.gov.in
+https://www.tneb.in
+https://www.tnschools.gov.in
+https://tangedco.gov.in
+
+# West Bengal
+https://www.wb.gov.in
+https://wbhealth.gov.in
+https://wbpolice.gov.in
+https://wbsedcl.in
+https://wbssc.gov.in
+https://westbengaleducation.org
+
+# Gujarat
+https://www.gujarat.gov.in
+https://guj-epra.gujarat.gov.in
+https://education.gujarat.gov.in
+https://gujpolice.gov.in
+https://ugvcl.com
+https://gspc.in
+
+# Rajasthan
+https://www.rajasthan.gov.in
+https://rajhealth.gov.in
+https://rajasthanpolice.gov.in
+https://rajseva.gov.in
+https://energy.rajasthan.gov.in
+https://education.rajasthan.gov.in
+
+# Madhya Pradesh
+https://www.mp.gov.in
+https://health.mp.gov.in
+https://mppolice.gov.in
+https://mpeducationportal.gov.in
+https://mpez.co.in
+https://mpwrd.gov.in
+
+# Bihar
+https://www.bihar.gov.in
+https://health.bih.nic.in
+https://biharpolice.gov.in
+https://biharboardonline.bihar.gov.in
+https://bseb.ac.in
+https://bsebbankaccountdetails.in
+
+# Delhi
+https://www.delhi.gov.in
+https://health.delhigovt.nic.in
+https://delhipolice.gov.in
+https://www.delhi.gov.in/wps/wcm/connect/doit_education
+https://bses.in
+https://tpddl.com
+
+# Kerala
+https://www.kerala.gov.in
+https://dhs.kerala.gov.in
+https://keralapolice.gov.in
+https://www.dhsekerala.gov.in
+https://kseb.in
+https://lsgkerala.gov.in
+
+# Andhra Pradesh
+https://www.ap.gov.in
+https://www.aphealth.gov.in
+https://appolice.gov.in
+https://apepdcl.in
+https://bse.ap.gov.in
+
+# Telangana
+https://www.telangana.gov.in
+https://health.telangana.gov.in
+https://www.tspolice.gov.in
+https://tserc.gov.in
+https://bse.telangana.gov.in
+
+# Haryana
+https://haryana.gov.in
+https://haryanahealth.nic.in
+https://haryanapolice.gov.in
+https://uhbvn.org.in
+https://www.schooleducationharyana.gov.in
+
+# Punjab
+https://www.punjab.gov.in
+https://pbhealth.gov.in
+https://punjabpolice.gov.in
+https://pspcl.in
+https://ssapunjab.org
+
+# Odisha
+https://odisha.gov.in
+https://www.health.odisha.gov.in
+https://odishapolice.gov.in
+https://www.ceoorissa.nic.in
+https://www.dheodisha.gov.in
+
+# Jharkhand
+https://www.jharkhand.gov.in
+https://health.jharkhand.gov.in
+https://www.jhpolice.gov.in
+
+# Assam
+https://assam.gov.in
+https://nhs.assam.gov.in
+https://assampolice.gov.in
+
+# Himachal Pradesh
+https://www.himachal.nic.in
+https://hphealth.nic.in
+https://hppolice.gov.in
+https://hpseb.in
+
+# Uttarakhand
+https://uk.gov.in
+https://health.uk.gov.in
+https://uttarakhandpolice.uk.gov.in
+
+# Chhattisgarh
+https://cgstate.gov.in
+https://cghealth.nic.in
+https://cgpolice.gov.in
+
+# ── DISTRICT PORTALS (examples) ──────────────────────────────
+https://lucknow.nic.in
+https://varanasi.nic.in
+https://agra.nic.in
+https://pune.gov.in
+https://nashik.gov.in
+https://nagpur.gov.in
+https://bengaluru.gov.in
+https://mysuru.gov.in
+https://chennai.gov.in
+https://coimbatore.gov.in
+https://kolkata.gov.in
+https://howrah.gov.in
+https://patna.gov.in
+https://jaipur.nic.in
+https://jodhpur.nic.in
+https://bhopal.gov.in
+https://indore.nic.in
+https://hyderabad.gov.in
+https://raipur.gov.in
+https://ranchi.nic.in
+
+# ── NEW STATE & CENTRAL PORTALS (ADDED) ──────────────────────
+https://jk.gov.in
+https://jkpolice.gov.in
+https://www.goa.gov.in
+https://goapolice.gov.in
+https://tripura.gov.in
+https://manipur.gov.in
+https://meghalaya.gov.in
+https://mizoram.gov.in
+https://nagaland.gov.in
+https://sikkim.gov.in
+https://chandigarh.gov.in
+https://py.gov.in
+https://ladakh.nic.in
+https://powermin.gov.in
+https://coal.nic.in
+https://mod.gov.in
+https://mea.gov.in
+https://commerce.gov.in
+https://lawmin.gov.in
+
+# ── SCHOLARSHIPS & ACADEMIC PORTALS ───────────────────────────
+https://scholarships.gov.in
+https://www.aicte-india.org
+https://www.ugc.gov.in
+https://swayam.gov.in
+https://nptel.ac.in
+https://dbtindia.gov.in
+
+# ── FORESTRY & ENVIRONMENT ──────────────────────────────────
+https://moef.gov.in
+https://www.icfre.org
+https://www.wii.gov.in
+https://greentribunal.gov.in
+https://fsi.nic.in
+https://wccb.gov.in
+https://zsi.gov.in
+https://bsi.gov.in
+
+# ── WATER RESOURCES, RIVERS & JAL SHAKTI ───────────────────────
+https://mowr.gov.in
+https://cwc.gov.in
+https://nmcg.nic.in
+https://cgwb.gov.in
+https://nwda.gov.in
+https://wAPcos.co.in
+https://nhp.mowr.gov.in
+https://farakkabarrageministryofjalshakti.gov.in
+
+# ── ALL CENTRAL MINISTRIES (EXPANDED) ─────────────────────────
+https://indianrailways.gov.in
+https://morth.nic.in
+https://meity.gov.in
+https://civilaviation.gov.in
+https://indiaculture.gov.in
+https://tourism.gov.in
+https://yas.nic.in
+https://dst.gov.in
+https://mines.gov.in
+https://steel.gov.in
+https://moca.gov.in
+https://dop.gov.in
+https://www.dgft.gov.in
+https://tribal.nic.in
+https://socialjustice.gov.in
+https://rural.nic.in
+https://panchayat.gov.in
+https://sansad.in
+https://supremecourtofindia.nic.in
+https://main.sci.gov.in
+https://highcourt.gov.in
